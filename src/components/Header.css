@@ -1,0 +1,88 @@
+:root {
+  --navy: #1f355e;
+  --green: #7bb241;
+  --text-dark: #333;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== Top Bar ===== */
+.topbar {
+  background: var(--navy);
+  color: white;
+  font-size: 13px;
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.topbar-left span {
+  margin-right: 20px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+/* Logo */
+.logo img {
+  height: 55px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: var(--green);
+}
+
+.menu .active {
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* CTA */
+.cta button {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
