@@ -1,0 +1,141 @@
+.massive-footer {
+  background: #0a1128; /* Your Navy */
+  color: white;
+  padding: 100px 0 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 60px;
+  padding-bottom: 80px;
+}
+
+/* Identity Column */
+.footer-logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.footer-logo span {
+  color: #28a745; /* Your Green */
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* Column Labels */
+.footer-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #28a745;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #28a745;
+}
+
+/* Contact & Socials */
+.footer-contact-info p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  font-size: 12px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+}
+
+.technical-stamp {
+  font-size: 10px;
+  font-weight: 900;
+  color: #28a745;
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .bottom-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}

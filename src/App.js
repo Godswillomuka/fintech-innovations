@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
 
-// Import your new industrial components
 import Header from './components/Header';
 import Hero from './components/Hero';
 import IndustrialServices from './components/IndustrialServices';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
-
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -34,9 +33,9 @@ function App() {
         <Contact />
       </main>
 
-      <footer style={{ background: '#0a1128', color: 'white', padding: '20px', textAlign: 'center', fontSize: '12px' }}>
-        <p>© 2026 Fintech Print Innovations | Premium Industrial Branding</p>
-      </footer>
+      {/* 7. The Massive Footer */}
+      <Footer />
+      
     </div>
   );
 }
