@@ -7,6 +7,7 @@ import "./Header.css";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -19,6 +20,7 @@ const Header = () => {
     const handleHashChange = () => {
       const hash = window.location.hash.slice(1) || "home";
       setActiveLink(hash);
+      setMenuOpen(false); // Close menu when link is clicked
     };
 
     handleHashChange();
@@ -34,13 +36,28 @@ const Header = () => {
     { label: "CONTACT", id: "contact" }
   ];
 
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <header className={`main-header ${scrolled ? "active" : ""}`}>
       <div className="container nav-wrapper">
         <div className="logo-container">
           <img src={logo} alt="Fintech Print Innovations" />
         </div>
-        <nav className="glass-nav">
+        
+        {/* Hamburger Menu Button */}
+        <button 
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Navigation */}
+        <nav className={`glass-nav ${menuOpen ? "open" : ""}`}>
           <ul className="nav-list">
             {navLinks.map((link) => (
               <li key={link.id}>
