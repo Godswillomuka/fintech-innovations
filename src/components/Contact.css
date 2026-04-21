@@ -252,5 +252,5 @@
 @media (max-width: 1000px) {
   .portal-wrapper { grid-template-columns: 1fr; gap: 40px; }
   .massive-title { font-size: 38px; }
-  .portal-form-container { padding: 30px; min-height: auto; }
+  .portal-form-container { padding: 30px; min-height: min-content; }
 }

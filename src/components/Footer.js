@@ -40,19 +40,38 @@ const Footer = () => {
 
         {/* Column 4: Contact & Social */}
         <div className="footer-column">
-          <h4 className="footer-label">CONNECT</h4>
+          <h4 className="footer-label">CONNECT WITH US</h4>
           <div className="footer-contact-info">
-            <p>info@fintechprint.com</p>
-            <p>+254 748 000087</p>
+            <p>fintechprintinnovations@gmail.com</p>
+            <p>+254113833488</p>
           </div>
           <div className="footer-socials">
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="LinkedIn">LI</a>
-            <a href="#" aria-label="X">X</a>
-            <a href="#" aria-label="Instagram">IG</a>
-          </div>
-        </div>
 
+  <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+    <i className="fab fa-facebook-f"></i>
+  </a>
+
+  <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+    <i className="fab fa-x-twitter"></i>
+  </a>
+
+  <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+    <i className="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+    <i className="fab fa-linkedin-in"></i>
+  </a>
+
+  <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube">
+    <i className="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://tiktok.com" target="_blank" rel="noreferrer" aria-label="TikTok">
+    <i className="fab fa-tiktok"></i>
+  </a>
+
+</div>
       </div>
 
       <div className="footer-bottom">
@@ -60,8 +79,9 @@ const Footer = () => {
           <p className="copyright">
             COPYRIGHT © {currentYear} FINTECHPRINT INNOVATIONS LTD. ALL RIGHTS RESERVED.
           </p>
-          <p className="technical-stamp">OPERATIONAL // HQ_NAIROBI</p>
+          <p className="technical-stamp">Nairobi, Kenya</p>
         </div>
+      </div>
       </div>
     </footer>
   );
