@@ -5,7 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import IndustrialServices from './components/IndustrialServices';
-// import Portfolio from './components/Portfolio';
+import Portfolio from './components/Portfolio';
 import About from './components/About';
 
 import ContactPortal from './components/ContactPortal';
@@ -28,7 +28,7 @@ function App() {
         <IndustrialServices />
 
         {/* 5. The Portfolio Showcase */}
-        {/* <Portfolio /> */}
+        <Portfolio />
 
         {/* 6. The Dark Contact Portal */}
         <ContactPortal />
