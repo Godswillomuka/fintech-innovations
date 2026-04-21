@@ -1,205 +1,232 @@
-/* ===========================
-   PORTFOLIO SECTION
-   =========================== */
+/* ==========================================================================
+   PORTAL / PORTFOLIO SECTION
+   ========================================================================== */
 
 .portfolio-section {
   padding: 140px 0;
-  background: var(--light-bg);
+  background: #f8f9fa; /* Light industrial gray */
 }
-
-/* ===========================
-   HEADER
-   =========================== */
 
 .portfolio-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
+/* Filter Buttons */
 .portfolio-filters {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 .filter-btn {
-  background: transparent;
+  background: white;
   border: 1px solid #ddd;
-  padding: 10px 22px;
-  font-size: 12px;
-  font-weight: 800;
+  padding: 12px 28px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: 0.3s;
-  color: var(--navy);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: #0a1128; /* Your Navy Color */
+  border-radius: 4px;
 }
 
-.filter-btn.active,
+.filter-btn.active, 
 .filter-btn:hover {
-  background: var(--navy);
+  background: #0a1128;
   color: white;
+  border-color: #0a1128;
+  transform: translateY(-3px);
 }
 
-/* ===========================
-   GRID (FIXED HEIGHT SYSTEM)
-   =========================== */
+/* ==========================================================================
+   BENTO GRID (Matches Services.css)
+   ========================================================================== */
 
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 320px;
-  gap: 20px;
+  grid-auto-rows: 350px;
+  gap: 25px;
 }
 
-/* IMPORTANT: keeps ALL items same height */
 .portfolio-item {
   position: relative;
   background-size: cover;
   background-position: center;
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
-  height: 320px; /* ensures uniform size (fix for branding issue) */
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Bento Logic: Spanning items for industrial variety */
+.portfolio-item:nth-child(1),
+.portfolio-item:nth-child(4) {
+  grid-column: span 2;
 }
 
 .portfolio-item:hover {
-  transform: translateY(-6px) scale(1.01);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(10, 17, 40, 0.15);
 }
-
-/* ===========================
-   OVERLAY
-   =========================== */
 
 .portfolio-overlay {
   position: absolute;
   inset: 0;
+  background: linear-gradient(to top, rgba(10, 17, 40, 0.95) 0%, rgba(10, 17, 40, 0.2) 60%);
   display: flex;
   align-items: flex-end;
-  padding: 35px;
-  background: rgba(10, 17, 40, 0);
-  transition: 0.4s ease;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  background: rgba(10, 17, 40, 0.85);
-}
-
-.portfolio-info {
-  transform: translateY(25px);
-  opacity: 0;
-  transition: 0.4s ease;
-}
-
-.portfolio-item:hover .portfolio-info {
-  transform: translateY(0);
-  opacity: 1;
+  padding: 40px;
 }
 
 .proj-cat {
-  color: var(--green);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 2px;
+  color: #28a745; /* Success Green */
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  display: block;
 }
 
 .portfolio-info h3 {
   color: white;
-  font-size: 22px;
-  font-weight: 800;
-  margin: 10px 0;
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
 .view-project {
-  color: white;
   font-size: 12px;
-  font-weight: 700;
-  border-bottom: 2px solid var(--green);
+  font-weight: 800;
+  color: white;
+  border-bottom: 2px solid #28a745;
+  padding-bottom: 5px;
   display: inline-block;
-  padding-bottom: 4px;
-  cursor: pointer;
+  letter-spacing: 1px;
 }
 
-/* ===========================
-   MODAL
-   =========================== */
+/* ==========================================================================
+   SHALLOW CASE STUDY MODAL
+   ========================================================================== */
 
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(10, 17, 40, 0.96);
+  z-index: 1000;
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 999;
+  align-items: center;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px);
+  padding: 20px;
 }
 
 .modal-content {
-  width: 85%;
-  max-width: 1100px;
-  background: #0a1128;
-  padding: 30px;
-  border-radius: 10px;
-  color: white;
+  background: white;
+  width: 100%;
+  max-width: 1050px;
+  padding: 50px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #0a1128;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .modal-cat {
-  color: var(--green);
-  margin-bottom: 20px;
-  font-weight: 700;
+  color: #28a745;
+  font-weight: 800;
+  letter-spacing: 3px;
+  font-size: 11px;
+  margin-bottom: 40px;
+  display: block;
 }
 
-/* ===========================
-   GALLERY (5 images compact)
-   =========================== */
-
+/* The Horizontal/Shallow Gallery Grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* compact 5-image layout */
-  gap: 8px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  margin: 0;
+  background: #fdfdfd;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s;
+}
+
+.gallery-item:hover {
+  border-color: #28a745;
 }
 
 .gallery-item img {
   width: 100%;
-  display: block;
-  border-radius: 6px;
+  height: 130px; /* Small fixed height */
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 12px;
 }
 
-/* caption BELOW image */
 .gallery-item figcaption {
   font-size: 11px;
-  color: rgba(255,255,255,0.7);
-  margin-top: 6px;
-  text-align: left;
-}
-
-/* ===========================
-   CLOSE BUTTON
-   =========================== */
-
-.close-btn {
-  margin-top: 20px;
-  background: var(--green);
-  border: none;
-  padding: 10px 20px;
-  color: white;
   font-weight: 700;
-  cursor: pointer;
+  color: #0a1128;
+  text-transform: uppercase;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0 5px;
 }
 
-/* ===========================
+/* Close Button (Top Right) */
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: #f0f0f0;
+  color: #0a1128;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #28a745;
+  color: white;
+  transform: rotate(90deg);
+}
+
+/* ==========================================================================
    RESPONSIVE
-   =========================== */
+   ========================================================================== */
 
 @media (max-width: 1024px) {
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -208,14 +235,24 @@
   .portfolio-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 30px;
   }
-
+  
   .portfolio-grid {
     grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+  }
+  
+  .portfolio-item:nth-child(1),
+  .portfolio-item:nth-child(4) {
+    grid-column: span 1;
   }
 
+  .modal-content {
+    padding: 30px;
+  }
+  
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr; /* Two per row on mobile */
   }
 }

@@ -1,0 +1,152 @@
+.contact-portal {
+  padding: 100px 0; /* Reduced from 120px */
+  background: var(--navy);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.portal-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px; /* Reduced gap */
+  align-items: center; /* Changed from flex-start to center to balance the height */
+}
+
+.massive-title {
+  font-size: 52px; /* Slightly smaller to keep it compact */
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 15px 0 40px 0; /* Reduced bottom margin */
+}
+
+/* Contact Details Styling */
+.detail-block {
+  margin-bottom: 25px; /* Reduced from 35px */
+}
+
+.detail-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--green);
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.detail-block p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 2px 0;
+}
+
+/* Form Styles - COMPACTED */
+.portal-form-container {
+  background: white;
+  padding: 40px; /* Reduced from 50px */
+  border-radius: 4px;
+  /* Removed min-height: 620px to prevent stretching */
+  width: 100%;
+  align-self: center; 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.optional-tag {
+  color: #999;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.industrial-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px; /* Tighter gap */
+}
+
+.input-group {
+  margin-bottom: 15px; /* Reduced from 20px */
+}
+
+.input-group label {
+  display: block;
+  font-size: 10px;
+  font-weight: 900;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 12px; /* Reduced from 15px */
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.input-group textarea {
+  height: 80px; /* Reduced height for subject brief */
+  resize: none;
+}
+
+.submit-btn-massive {
+  width: 100%;
+  background: #28a745; 
+  color: white;
+  padding: 15px; /* Reduced from 20px */
+  border: none;
+  font-weight: 800;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: filter 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Success State Styles - COMPACTED */
+.success-message {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-icon-circle {
+  width: 70px; /* Reduced from 90px */
+  height: 70px;
+  background-color: #28a745;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.fly-jet {
+  width: 35px;
+  height: 35px;
+  transform: rotate(-45deg);
+}
+
+.thank-you-text {
+  font-size: 32px; /* Reduced from 42px */
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.success-subtext {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1000px) {
+  .portal-wrapper { 
+    grid-template-columns: 1fr; 
+    gap: 40px;
+  }
+  .massive-title { font-size: 38px; }
+  .portal-form-container { padding: 30px; }
+}

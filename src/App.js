@@ -8,7 +8,7 @@ import IndustrialServices from './components/IndustrialServices';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 
-import ContactPortal from './components/ContactPortal';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         <Portfolio />
 
         {/* 6. The Dark Contact Portal */}
-        <ContactPortal />
+        <Contact />
       </main>
 
       <footer style={{ background: '#0a1128', color: 'white', padding: '20px', textAlign: 'center', fontSize: '12px' }}>
