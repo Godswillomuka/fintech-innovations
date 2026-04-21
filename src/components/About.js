@@ -27,15 +27,15 @@ const About = () => {
             <div className="pillar-overlay">
               <div className="pillar-line"></div>
               <h3>Strategic Methodologies</h3>
-              <p>Effective branding goes beyond aesthetics. We use market research and competitor analysis to define your unique place in the market.</p>
+              <p>At FintechPrint Innovations, we believe effective branding goes beyond aesthetics, combining strategic market research, competitor analysis, and audience understanding to create brands that resonate deeply and stand out.</p>
             </div>
           </div>
           
           <div className="pillar-card" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVzaWduJTIwY3JlYXRpdmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60)' }}>
             <div className="pillar-overlay">
               <div className="pillar-line"></div>
-              <h3>Creative Excellence</h3>
-              <p>Our team is dedicated to creating visually stunning designs that capture the essence of your brand through innovation and creativity.</p>
+              <h3>Creative Design Excellence</h3>
+              <p>Our design team is dedicated to creating visually stunning, effective work that reflects your brand identity, using innovation and creativity to deliver impactful solutions and consistently achieve exceptional results every time.</p>
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const About = () => {
             <div className="pillar-overlay">
               <div className="pillar-line"></div>
               <h3>Unmatched Print Quality</h3>
-              <p>State-of-the-art technology ensures your materials are produced with precision, from business cards to massive industrial banners.</p>
+              <p>We use state-of-the-art printing technology to produce high-quality materials with precision and consistency, delivering exceptional results across everything from business cards to large-scale banners and impactful promotional products.</p>
             </div>
           </div>
         </div>
