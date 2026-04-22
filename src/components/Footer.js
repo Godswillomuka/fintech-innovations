@@ -51,9 +51,10 @@ const Footer = () => {
         
         {/* Column 1: Identity */}
         <div className="footer-column branding">
-          <h2 className="footer-logo">FINTECH<span>PRINT</span></h2>
+          <h2 className="footer-logo">FINTECHPRINT <span>INNOVATIONS</span></h2>
           <p className="footer-tagline">
-            Engineering disruptive print and digital solutions for the modern industrial landscape.
+            We are a team of passionate people whose goal is to improve everyone's life through disruptive products. We build great products to solve your business problems.
+            Our products are designed for small to medium size companies willing to optimize their performance.
           </p>
         </div>
 
