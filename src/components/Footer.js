@@ -4,6 +4,47 @@ import './Footer.css';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  // Social media links configuration
+  // Update these URLs with your actual social media profiles
+  const socialLinks = [
+    {
+      icon: 'fab fa-facebook-f',
+      url: 'https://facebook.com/fintechprintinnovations',
+      label: 'Facebook',
+      title: 'Follow us on Facebook'
+    },
+    {
+      icon: 'fab fa-x-twitter',
+      url: 'https://x.com/fintechprint',
+      label: 'X',
+      title: 'Follow us on X (Twitter)'
+    },
+    {
+      icon: 'fab fa-instagram',
+      url: 'https://instagram.com/fintechprintinnovations',
+      label: 'Instagram',
+      title: 'Follow us on Instagram'
+    },
+    {
+      icon: 'fab fa-linkedin-in',
+      url: 'https://linkedin.com/company/fintechprint-innovations',
+      label: 'LinkedIn',
+      title: 'Connect with us on LinkedIn'
+    },
+    {
+      icon: 'fab fa-youtube',
+      url: 'https://youtube.com/@fintechprintinnovations',
+      label: 'YouTube',
+      title: 'Subscribe to our YouTube channel'
+    },
+    {
+      icon: 'fab fa-tiktok',
+      url: 'https://tiktok.com/@fintechprint',
+      label: 'TikTok',
+      title: 'Follow us on TikTok'
+    }
+  ];
+
   return (
     <footer className="massive-footer">
       <div className="container footer-grid">
@@ -46,32 +87,20 @@ const Footer = () => {
             <p>+254113833488</p>
           </div>
           <div className="footer-socials">
-
-  <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
-    <i className="fab fa-facebook-f"></i>
-  </a>
-
-  <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
-    <i className="fab fa-x-twitter"></i>
-  </a>
-
-  <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
-    <i className="fab fa-instagram"></i>
-  </a>
-
-  <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-    <i className="fab fa-linkedin-in"></i>
-  </a>
-
-  <a href="https://youtube.com" target="_blank" rel="noreferrer" aria-label="YouTube">
-    <i className="fab fa-youtube"></i>
-  </a>
-
-  <a href="https://tiktok.com" target="_blank" rel="noreferrer" aria-label="TikTok">
-    <i className="fab fa-tiktok"></i>
-  </a>
-
-</div>
+            {socialLinks.map((social, index) => (
+              <a 
+                key={index}
+                href={social.url} 
+                target="_blank" 
+                rel="noreferrer" 
+                aria-label={social.label}
+                title={social.title}
+              >
+                <i className={social.icon}></i>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="footer-bottom">
@@ -81,7 +110,6 @@ const Footer = () => {
           </p>
           <p className="technical-stamp">Nairobi, Kenya</p>
         </div>
-      </div>
       </div>
     </footer>
   );

@@ -185,17 +185,41 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .nav-list {
+    gap: 25px;
+  }
+
+  .glass-nav {
+    gap: 25px;
+    padding: 10px 20px;
+  }
+
+  .nav-list a {
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 1024px) {
   .nav-list {
     gap: 20px;
   }
 
   .glass-nav {
-    gap: 25px;
+    gap: 20px;
   }
 
   .nav-list a {
-    font-size: 11px;
+    font-size: 10px;
+  }
+
+  .sign-in-btn {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .logo-container img {
+    height: 30px;
   }
 }
 
@@ -205,45 +229,39 @@
   }
 
   .nav-wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo-container {
-    flex: 1;
-  }
-
-  .logo-container img {
-    height: 30px;
+    padding: 0 15px;
   }
 
   /* Mobile Navigation */
   .glass-nav {
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 65px;
     left: 0;
     right: 0;
     width: 100%;
-    background: rgba(10, 17, 40, 0.98);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(123, 178, 65, 0.2);
+    max-width: none;
     border-radius: 0;
+    background: rgba(10, 17, 40, 0.95);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(123, 178, 65, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     flex-direction: column;
     gap: 0;
     padding: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    z-index: 999;
   }
 
   .glass-nav.open {
-    max-height: 400px;
-    padding: 20px;
-    gap: 15px;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .nav-list {
@@ -251,11 +269,13 @@
     gap: 0;
     width: 100%;
     text-align: left;
+    padding: 15px 0;
   }
 
   .nav-list li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 20px;
+    display: block;
   }
 
   .nav-list li:last-child {
@@ -264,7 +284,8 @@
 
   .nav-list a {
     font-size: 13px;
-    padding: 8px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
 
   .nav-list a.active {
@@ -276,7 +297,62 @@
   }
 
   .sign-in-btn {
-    width: 100%;
-    margin-top: 10px;
+    width: calc(100% - 40px);
+    margin: 15px 20px 10px 20px;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .main-header {
+    padding: 12px 0;
+  }
+
+  .main-header.active {
+    padding: 10px 0;
+    background: rgba(10, 17, 40, 0.95);
+  }
+
+  .logo-container img {
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    width: 26px;
+    height: 26px;
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 2.5px;
+    margin: 3.5px 0;
+  }
+
+  .glass-nav {
+    top: 60px;
+  }
+
+  .glass-nav.open {
+    max-height: 450px;
+  }
+
+  .nav-list li {
+    padding: 12px 18px;
+  }
+
+  .sign-in-btn {
+    width: calc(100% - 36px);
+    margin: 12px 18px 8px 18px;
+    padding: 9px;
+    font-size: 10px;
+  }
+
+  .logo-container img {
+    height: 24px;
+  }
+
+  .main-header {
+    padding: 10px 0;
   }
 }

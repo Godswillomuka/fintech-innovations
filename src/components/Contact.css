@@ -249,8 +249,204 @@
    RESPONSIVE
    =========================== */
 
+@media (max-width: 1200px) {
+  .massive-title {
+    font-size: 44px;
+  }
+
+  .contact-portal {
+    padding: 80px 0;
+  }
+
+  .portal-wrapper {
+    gap: 60px;
+  }
+}
+
 @media (max-width: 1000px) {
-  .portal-wrapper { grid-template-columns: 1fr; gap: 40px; }
-  .massive-title { font-size: 38px; }
-  .portal-form-container { padding: 30px; min-height: min-content; }
+  .portal-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .massive-title {
+    font-size: 38px;
+  }
+
+  .portal-form-container {
+    padding: 30px;
+    min-height: min-content;
+  }
+
+  .industrial-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-portal {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-portal {
+    padding: 50px 0;
+  }
+
+  .portal-wrapper {
+    gap: 30px;
+  }
+
+  .massive-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .detail-label {
+    font-size: 9px;
+    margin-bottom: 3px;
+  }
+
+  .detail-block {
+    margin-bottom: 20px;
+  }
+
+  .contact-link-row {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .contact-link-row p {
+    font-size: 14px;
+  }
+
+  .portal-form-container {
+    padding: 25px;
+  }
+
+  .input-group label {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .input-group textarea {
+    height: 80px;
+  }
+
+  .submit-btn-massive {
+    padding: 14px;
+    font-size: 13px;
+    min-height: 48px;
+  }
+
+  .thank-you-text {
+    font-size: 28px;
+  }
+
+  .success-subtext {
+    font-size: 14px;
+  }
+
+  .success-icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fly-jet {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-portal {
+    padding: 40px 0;
+  }
+
+  .massive-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .detail-block {
+    margin-bottom: 15px;
+  }
+
+  .contact-link-row {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .contact-link-row p {
+    font-size: 12px;
+  }
+
+  .contact-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .portal-form-container {
+    padding: 20px;
+  }
+
+  .input-group {
+    margin-bottom: 12px;
+  }
+
+  .input-group label {
+    font-size: 8px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .input-group textarea {
+    height: 70px;
+  }
+
+  .optional-tag {
+    font-size: 8px;
+  }
+
+  .submit-btn-massive {
+    padding: 12px;
+    font-size: 12px;
+    min-height: 44px;
+  }
+
+  .thank-you-text {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .success-subtext {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .success-icon-circle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .fly-jet {
+    width: 24px;
+    height: 24px;
+  }
+
+  .go-home-btn {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
 }

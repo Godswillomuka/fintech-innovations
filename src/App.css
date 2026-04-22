@@ -202,10 +202,66 @@ body {
    Responsive Design
    =================================== */
 
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 64px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 85vh;
+  }
+
+  .hero-title {
+    font-size: 52px;
+  }
+
+  .btn-secondary {
+    margin-left: 10px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .hero {
+    height: 80vh;
+    padding: 40px 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
   .glass-nav {
     flex-direction: column;
     gap: 15px;
+    padding: 15px 20px;
   }
 
   .nav-list {
@@ -214,8 +270,18 @@ body {
     text-align: center;
   }
 
-  .hero-title {
-    font-size: 48px;
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 13px;
+    margin-left: 0 !important;
+    margin-top: 8px;
+    display: block;
+    width: fit-content;
+  }
+
+  .btn-secondary {
+    margin-top: 10px;
   }
 
   .portal-wrapper {
@@ -223,8 +289,69 @@ body {
     gap: 40px;
   }
 
+  .portal-content h2 {
+    font-size: 32px;
+  }
+
+  .portal-form input,
+  .portal-form textarea {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 75vh;
+    padding: 30px 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+  }
+
+  .btn-primary,
   .btn-secondary {
-    margin-left: 0;
+    padding: 10px 20px;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-secondary {
     margin-top: 10px;
+  }
+
+  .portal-content h2 {
+    font-size: 24px;
+  }
+
+  .portal-content p {
+    font-size: 14px;
+  }
+
+  .portal-form input,
+  .portal-form textarea {
+    padding: 10px;
+    font-size: 12px;
   }
 }
