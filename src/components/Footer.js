@@ -53,8 +53,7 @@ const Footer = () => {
         <div className="footer-column branding">
           <h2 className="footer-logo">FINTECHPRINT <span>INNOVATIONS</span></h2>
           <p className="footer-tagline">
-            We are a team of passionate people whose goal is to improve everyone's life through disruptive products. We build great products to solve your business problems.
-            Our products are designed for small to medium size companies willing to optimize their performance.
+            We build disruptive products designed to solve complex business problems for small to medium-sized companies looking to optimize performance and improve lives through innovative, high-impact technological solutions.
           </p>
         </div>
 
